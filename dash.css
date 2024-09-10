@@ -1,0 +1,71 @@
+/* dash.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('mk.jpg'); /* Add background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #333;
+}
+
+header {
+    background-color: rgba(76, 175, 80, 0.8); /* Semi-transparent green */
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 30px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; /* Added margin reset */
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+footer {
+    text-align: center;
+    padding: 1em 0;
+    background-color: rgba(51, 51, 51, 0.8); /* Semi-transparent dark */
+    color: white;
+    position: relative;
+    width: 100%;
+    margin-top: 50px; 
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em; /* Added padding for section */
+}
+
+canvas {
+    background-color: rgba(255, 255, 255, 0.8); /* Transparent white background for canvas */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 1em;
+    margin: 20px 0;
+}
+
+
+
+
+
+
+
