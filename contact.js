@@ -1,29 +1,36 @@
-// Function to handle form submission
-document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault();
+       var formData = [];
 
-    // Get form data
-    var name = document.getElementById('name').value;
-    var email = document.getElementById('email').value;
-    var subject = document.getElementById('subject').value;
-    var message = document.getElementById('message').value;
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
 
-    // Create a new workbook and worksheet
-    var wb = XLSX.utils.book_new();
-    var ws_data = [
-        ["Name", "Email", "Subject", "Message"],
-        [name, email, subject, message]
-    ];
-    var ws = XLSX.utils.aoa_to_sheet(ws_data);
+            // Get form data
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var subject = document.getElementById('subject').value;
+            var message = document.getElementById('message').value;
 
-    // Append the worksheet to the workbook
-    XLSX.utils.book_append_sheet(wb, ws, "ContactUs");
+            // Add the new data to the array
+            formData.push({ name: name, email: email, subject: subject, message: message });
 
-    // Write the workbook to a file
-    XLSX.writeFile(wb, "ContactUsDetails.xlsx");
+            // Clear the form
+            document.getElementById('contact-form').reset();
 
-    // Clear the form
-    document.getElementById('contact-form').reset();
+            alert('Your message has been sent and saved in memory.');
+        });
 
-    alert('Your message has been sent and saved to an Excel file.');
-});
+        // Function to extract and display the stored data
+        function displayFormData() {
+            var output = document.getElementById('output');
+            output.innerHTML = ''; // Clear previous output
+
+            formData.forEach(function(data, index) {
+                var entry = document.createElement('div');
+                entry.className = 'entry';
+                entry.innerHTML = `<strong>Entry ${index + 1}:</strong><br>
+                                   Name: ${data.name}<br>
+                                   Email: ${data.email}<br>
+                                   Subject: ${data.subject}<br>
+                                   Message: ${data.message}<br>`;
+                output.appendChild(entry);
+            });
+        }

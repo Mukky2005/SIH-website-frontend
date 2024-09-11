@@ -28,7 +28,7 @@ var ctx1 = document.getElementById('lineChart1').getContext('2d');
                 labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
                 datasets: [{
                     label: 'POTASSIUM',
-                    data: [65, 59, 80, 81, 56, 55, 40],
+                    data: [23, 45, 42, 78, 67, 56, 56],
                     borderColor: 'rgba(75, 192, 192, 1)',
                     borderWidth: 3, // Increased line width
                     fill: false
