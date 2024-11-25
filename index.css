@@ -41,6 +41,12 @@ section {
     background-color: rgba(0, 128, 0, 0.5); /* Semi-transparent green */
     margin: 20px;
     border-radius: 10px;
+    
+}
+
+#testimonials h1 {
+    font-size: 3em; /* Adjust the size as needed */
+    text-align: center;
 }
 
 footer {
